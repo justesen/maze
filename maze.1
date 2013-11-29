@@ -1,0 +1,40 @@
+.TH maze 1 "September 2011"
+.SH NAME
+maze \- a maze generator and solver
+.SH SYNOPSIS
+maze [\fIoptions\fR]
+.SH DESCRIPTION
+maze is a simple maze generator and solver. It generates simple black and white mazes and solves that same maze. The images - solved and unsolved - are saved as PNG images to the current directory.
+.SH OPTIONS
+.TP
+.B
+--height \fIcells\fR
+Specify the height of the maze in cells. \fIcells\fR has to be uneven, but is automatically subtracted one if it is even, because of the maze layout: edge, path, wall, path, wall, ..., edge.
+.TP
+.B
+--width \fIcells\fR
+Specify the width of the maze in cells. \fIcells\fR has to be uneven, but is automatically subtracted one if it is even, because of the maze layout: edge, path, wall, path, wall, ..., edge.
+.TP
+.B
+--nosolve
+Do not solve the maze - only generate.
+.TP
+.B
+--pixpercell \fIpixels\fR
+Specify the width and height of the maze cells (cells are quadratic) in pixels. The default value is 10.
+.TP
+.B
+-h, --help
+Display help and information.
+.TP
+.B
+-v, --version
+Display program name, version number and copyright information.
+.TP
+.B
+-w, --warnings
+Print warnings.
+.SH HOMEPAGE
+http://justesen.zxq.net/src/maze/
+.SH AUTHOR
+Mathias N. Justesen <mathias.justesen@gmail.com>
