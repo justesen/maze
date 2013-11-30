@@ -2,14 +2,16 @@ maze - a maze generator and solver
 ==================================
 
 
-1) INSTALLATION
+1) Installation
 ---------------
 Note that you need to have a development version of the Cairo graphics library
 installed. It's usually found in your distributions repository or can be
 downloaded from `http://cairographics.org/`
 
 Compile:
+
 `$ make`
+
 Edit the Makefile to match your local setup. It's per default installed to
 /usr/local. Depending on setup you may have to be root:
 
