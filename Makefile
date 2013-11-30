@@ -1,11 +1,11 @@
 # Edit prefixes as you prefer (defaults should be alright)
 PREFIX = /usr/local
 BINPREFIX = ${PREFIX}/bin
-MANPREFIX  = ${PREFIX}/share/man
+MANPREFIX  = ${PREFIX}/share/man/man1
 
-VERSION = 0.2
+VERSION = 0.3
 
-CFLAGS = -Wall -std=c90 -pedantic -I /usr/include/cairo
+CFLAGS = -Wall -std=c90 -pedantic -I /usr/include/cairo -O3
 LDFLAGS = -L /usr/lib -lcairo
 CC = cc
 
@@ -36,11 +36,14 @@ install:
 	@mkdir -p ${BINPREFIX}
 	@cp -f maze ${BINPREFIX}
 	@chmod 755 ${BINPREFIX}/maze
-	@echo installing manual page to ${MANPREFIX}/man1
-	@mkdir -p ${MANPREFIX}/man1
-	@cp -f maze.1 ${MANPREFIX}/man1/maze.1
-	@chmod 644 ${MANPREFIX}/man1/maze.1
+	@echo installing manual page to ${MANPREFIX}
+	@mkdir -p ${MANPREFIX}
+	@cp -f maze.1 ${MANPREFIX}/maze.1
+	@chmod 644 ${MANPREFIX}/maze.1
 
 uninstall:
 	@echo removing executable file from ${BINPREFIX}
 	@rm -f ${BINPREFIX}/maze
+	@echo removing man file from ${MANPREFIX}
+	@rm -f ${MANPREFIX}/maze.1
+

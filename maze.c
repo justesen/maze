@@ -15,7 +15,7 @@
 
 
 #define PRG_NAME "maze" /* program name */
-#define VERSION  "0.2"  /* version number */
+#define VERSION  "0.3"  /* version number */
 
 #define UVISIT 0 /* cell is unvisited */
 #define VISIT  1 /* cell is visited */
